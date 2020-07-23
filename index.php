@@ -2,9 +2,20 @@
     $value1 = $_POST['value1'];
     $value2 = $_POST['value2'];
 
-    $result = $value1 + $value2;
-    
+    if (isset($_POST['btnSum'])) {
+        $result = $value1 + $value2;
+    } 
+    if (isset($_POST['btnSub'])) {
+        $result = $value1 - $value2;
+    } 
+    if (isset($_POST['btnMult'])) {
+        $result = $value1 * $value2;
+    } 
+    if (isset($_POST['btnDiv'])) {
+        $result = $value1 / $value2;
+    } 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,10 +41,10 @@
             
             <div class="form-row mt-1">
                 <div class="col d-flex justify-content-center">
-                    <button type="submit" class="m-2 btn-lg btn-success">+</button>
-                    <button type="submit" class="m-2 btn-lg btn-danger">-</button>
-                    <button type="submit" class="m-2 btn-lg btn-info">*</button>
-                    <button type="submit" class="m-2 btn-lg btn-warning">/</button>  
+                    <button type="submit" class="m-2 btn-lg btn-success" name="btnSum">+</button>
+                    <button type="submit" class="m-2 btn-lg btn-danger" name="btnSub">-</button>
+                    <button type="submit" class="m-2 btn-lg btn-info" name="btnMult">*</button>
+                    <button type="submit" class="m-2 btn-lg btn-warning" name="btnDiv">/</button>  
                 </div>
             </div>
             
