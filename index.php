@@ -38,10 +38,10 @@
                 <h2 class="text-center font-weight-bold mb-4"> Calculadora PHP </h2>
                 <div class="form-row">
                     <div class="col-md-6 mt-1">
-                        <input type="text" class="form-control" name="value1" placeholder="Valor 1" required>
+                        <input type="text" class="form-control" name="value1" value=0 required>
                     </div>
                     <div class="col-md-6 mt-1"> 
-                        <input type="text" class="form-control" name="value2" placeholder="Valor 2" required>
+                        <input type="text" class="form-control" name="value2" value=0 required>
                     </div>
                 </div>
 
