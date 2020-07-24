@@ -4,10 +4,7 @@
     $value1 = $_POST['value1'];
     $value2 = $_POST['value2'];
 
-    if($value1==''&&$value2==''){
-        $validate = 1;
-    }
-
+    
     if(is_numeric($value1) && is_numeric($value2)){
         if (isset($_POST['btnSum'])) {
             $result = $value1 + $value2;
@@ -22,8 +19,12 @@
             $result = $value1 / $value2;
         } 
     }else{
-        $validate = 0;
-        $error_msg = 'Ops! Você precisa adicionar números para calcular...';
+        if($value1=='' && $value2==''){
+            $validate = 1;
+        }else{
+            $validate = 0;
+            $error_msg = 'Ops! Você precisa adicionar números para calcular...';
+        }
     }
 ?>
 
