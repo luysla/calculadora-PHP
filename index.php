@@ -4,7 +4,6 @@
     $value1 = $_POST['value1'];
     $value2 = $_POST['value2'];
 
-    
     if(is_numeric($value1) && is_numeric($value2)){
         if (isset($_POST['btnSum'])) {
             $result = $value1 + $value2;
@@ -16,7 +15,12 @@
             $result = $value1 * $value2;
         } 
         if (isset($_POST['btnDiv'])) {
-            $result = $value1 / $value2;
+            if($value2==0){
+                $validate = 0;
+                $error_msg = 'Não é possível divisão por zero...Tente novamente';
+            }else{
+                $result = $value1 / $value2;
+            }
         } 
     }else{
         if($value1=='' && $value2==''){
