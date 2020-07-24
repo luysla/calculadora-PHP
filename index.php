@@ -4,6 +4,10 @@
     $value1 = $_POST['value1'];
     $value2 = $_POST['value2'];
 
+    if($value1==''&&$value2==''){
+        $validate = 1;
+    }
+
     if(is_numeric($value1) && is_numeric($value2)){
         if (isset($_POST['btnSum'])) {
             $result = $value1 + $value2;
@@ -38,10 +42,10 @@
                 <h2 class="text-center font-weight-bold mb-4"> Calculadora PHP </h2>
                 <div class="form-row">
                     <div class="col-md-6 mt-1">
-                        <input type="text" class="form-control" name="value1" value=0 required>
+                        <input type="text" class="form-control" name="value1" placeholder="Valor 1" required>
                     </div>
                     <div class="col-md-6 mt-1"> 
-                        <input type="text" class="form-control" name="value2" value=0 required>
+                        <input type="text" class="form-control" name="value2" placeholder="Valor 2" required>
                     </div>
                 </div>
 
