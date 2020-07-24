@@ -3,6 +3,6 @@
 Simples calculadora em PHP
 
 Acesse aqui:
-https://mathphp.herokuapp.com/
+<a href="https://mathphp.herokuapp.com/" target="_blank">https://mathphp.herokuapp.com/</a>
 
  
